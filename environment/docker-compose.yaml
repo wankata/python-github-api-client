@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app:
+    env_file:
+      - .env
+    build:
+      context: app/
+      cache_from:
+        - ${COMPOSE_PROJECT_NAME}_app:latest
+    image: ${COMPOSE_PROJECT_NAME}_app:latest
+    tty: true
+    volumes:
+      - ../:/code
+
+networks:
+  default:
+    name: ${COMPOSE_PROJECT_NAME}
