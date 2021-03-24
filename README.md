@@ -36,7 +36,9 @@ The attributes follow 1:1 the json attribute names, provided by GitHub.
 [GitHub documentation](https://docs.github.com/en/rest/reference/users#get-a-user)
 
 The method do **not** require authentication.
+
 It raises exception on anything but 200 OK.
+
 It returns users.User instance, which includes the following attributes:
 - login
 - id
@@ -79,7 +81,9 @@ It returns users.User instance, which includes the following attributes:
 [GitHub documentation](https://docs.github.com/en/rest/reference/users#get-the-authenticated-user)
 
 The method **requires** authentication.
+
 It raises exception on anything but 200 OK.
+
 It returns users.AuthenticatedUser instance, which include all User fields + the following
 additional attributes:
 - private_gists
