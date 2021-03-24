@@ -72,9 +72,9 @@ def get_user(user: str) -> User:
 
     url = f'/users/{user}'
 
-    response: requests.Response = get(url, auth=False)
+    response: requests.Response = get(url)
 
     if response.status_code == 200:
-        return User(response.json())
+        return AuthenticatedUser(response.json())
     else:
         raise UnsupportedResponseStatus(response.status_code)
