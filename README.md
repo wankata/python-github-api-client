@@ -5,6 +5,80 @@ This is a simple API client for Github, written in Python.
 The client implements **v3** of the API.
 
 
+## Setup
+
+The Github API Client works only with token authentication.
+To use methods, requiring authentication, provide a token as environment variable `GITHUB_TOKEN`
+
+
+## General Usage
+
+The Github API Client defines model classes for each data type, which cover the response json.
+
+The model classes don't allow you to assign attributes, not defined in the model, so they try to
+protect you from typos.
+
+The attributes follow 1:1 the json attribute names, provided by GitHub.
+
+
+## get_user()
+[GitHub documentation](https://docs.github.com/en/rest/reference/users#get-a-user)
+
+The method do **not** require authentication.
+It returns users.User instance, which includes the following attributes:
+- login
+- id
+- node_id
+- avatar_url
+- gravatar_id
+- url
+- html_url
+- followers_url
+- following_url
+- gists_url
+- starred_url
+- subscriptions_url
+- organizations_url
+- repos_url
+- events_url
+- received_events_url
+- type
+- site_admin
+- name
+- company
+- blog
+- location
+- email
+- hireable
+- bio
+- twitter_username
+- public_repos
+- public_gists
+- followers
+- following
+- created_at
+- updated_at
+
+
+## get_authenticated_user()
+[GitHub documentation](https://docs.github.com/en/rest/reference/users#get-the-authenticated-user)
+
+The method **requires** authentication. It returns users.AuthenticatedUser instance, which include
+all User fields + the following additional attributes:
+- private_gists
+- total_private_repos
+- owned_private_repos
+- disk_usage
+- collaborators
+- two_factor_authentication
+- plan
+
+
+## TODOs
+
+- Implement rate limits
+
+
 ## For developers only
 
 If you want to patch something, play around, run the tests, just follow the instructions below.

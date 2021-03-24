@@ -1,6 +1,9 @@
+-r requirements.txt
+
 gitlint==0.15.0
 flake8==3.9.0
 flake8-quotes==3.2.0
 flake8-commas==2.0.0
 mypy==0.812
 coverage==5.5
+requests-mock==1.8.0
