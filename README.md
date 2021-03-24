@@ -99,6 +99,7 @@ additional attributes:
 
 - Implement rate limits
 - Wrap HTTPError in GitHubClientError
+- Make it a real Python Package with .toml, etc.
 
 
 ## For developers only
