@@ -8,6 +8,6 @@ setup(
     author='Ivan Ivanov',
     author_email='wankata@ivanovi.net',
     license='MIT License',
-    packages=['python-github-api-client'],
+    packages=['github_api_client'],
     install_requires=['requests==2.25.1'],
 )
